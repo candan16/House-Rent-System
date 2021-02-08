@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class = "content-section">
+        <form method = "POST" action = "/register">
+            <div class="msg">{{ msg }}</div> 
+            <input type="number" name="user_type" placeholder="Enter Your Type" class="textbox" id="user_type" required></br></br> 
+            <input type="text" name="name" placeholder="Enter Your Username" class="textbox" id="name" required></br></br> 
+            <input type="email" name="email" placeholder="Enter Your Email ID" class="textbox" id="email" required></br></br>
+            <input type="number" name="phone_num" placeholder="Enter Your Phone Number" class="textbox" id="phone_num" required></br></br> 
+            <input type="date" name="birt_date" placeholder="Enter Your Birth Date" class="textbox" id="birt_date" required></br></br> 
+            <input type="password" name="password" placeholder="Enter Your Password" class="textbox" id="password" required></br></br> 
+            <input type="password" name="confirm_password" placeholder="Enter Your Password again" class="textbox" id="confirm_password" required></br></br> 
+            <input type="submit" class="btn" value="Register"> 
+        </form>
+    </div>
+    <div class = "border-top pt-3">
+        <small class = "text-muted">
+            Already have an account? <a class = "ml-2" href = "{{ url_for('login')}}"> Sign In</a>
+        </small>
+    </div>
+{% endblock content %}
